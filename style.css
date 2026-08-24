@@ -1,0 +1,874 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =====================================================
+   A4
+===================================================== */
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+body {
+    background: #d2d2d2;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    color: #263b25;
+}
+
+
+/* =====================================================
+   POSTER A4
+===================================================== */
+
+.poster {
+    width: 210mm;
+    height: 297mm;
+
+    margin: 20px auto;
+
+    padding: 11mm 10mm;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff9df 0%,
+            #f8f1d2 55%,
+            #edf2d5 100%
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.poster::before {
+    content: "";
+
+    position: absolute;
+
+    top: -80px;
+    left: -70px;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background: #d5e6b6;
+
+    opacity: 0.75;
+}
+
+.poster::after {
+    content: "";
+
+    position: absolute;
+
+    right: -80px;
+    bottom: -70px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: #dce8ba;
+
+    opacity: 0.75;
+}
+
+
+/* =====================================================
+   ORNAMEN
+===================================================== */
+
+.leaf {
+    position: absolute;
+
+    z-index: 1;
+
+    font-size: 50px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+}
+
+.leaf-1 {
+    top: 5px;
+    left: 5px;
+
+    transform: rotate(-25deg);
+}
+
+.leaf-2 {
+    top: 15px;
+    right: 5px;
+
+    transform: rotate(25deg);
+}
+
+.leaf-3 {
+    bottom: 5px;
+    left: 5px;
+
+    transform: rotate(20deg);
+}
+
+.leaf-4 {
+    bottom: 10px;
+    right: 5px;
+
+    transform: rotate(-20deg);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+.mini-title {
+    display: inline-block;
+
+    padding: 6px 24px;
+
+    border-radius: 30px;
+
+    background: #f3b92e;
+
+    color: #294b27;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 3px 0 #d4971e;
+}
+
+.header h1 {
+    margin: 7px 0 0;
+
+    font-size: 41px;
+
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+
+    color: #185726;
+
+    text-shadow:
+        2px 2px 0 white,
+        4px 4px 0 #e6c976;
+}
+
+.header h2 {
+    margin: 3px 0 7px;
+
+    font-size: 36px;
+
+    line-height: 1;
+
+    letter-spacing: 3px;
+
+    color: #d55c25;
+
+    text-shadow:
+        2px 2px 0 white;
+}
+
+.subtitle {
+    display: inline-block;
+
+    padding: 7px 28px;
+
+    border-radius: 30px;
+
+    background: #3d752f;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 0 #28531e;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.section-title {
+    display: inline-block;
+
+    padding: 7px 22px;
+
+    border-radius: 30px;
+
+    background: #467b31;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 0 #2e5a23;
+
+    border: 2px solid #eef3d7;
+}
+
+.section-title.center {
+    display: block;
+
+    width: max-content;
+
+    margin: 0 auto 13px;
+}
+
+.section-title.small {
+    font-size: 15px;
+
+    padding: 6px 18px;
+
+    margin-bottom: 9px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+    position: relative;
+
+    z-index: 4;
+
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   FOTO UTAMA
+===================================================== */
+
+.main-photo {
+    position: relative;
+
+    height: 180px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border: 5px solid white;
+
+    background: #eee;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.main-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.photo-label {
+    position: absolute;
+
+    left: 12px;
+    bottom: 12px;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: #ee991e;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   APA ITU
+===================================================== */
+
+.what-is {
+    min-height: 170px;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    background: #fff7dc;
+
+    border: 2px solid #d6ad4d;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.06);
+}
+
+.what-is p {
+    margin: 10px 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #50594a;
+}
+
+.what-is strong {
+    color: #cf5427;
+}
+
+.what-is ul {
+    margin: 8px 0 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.what-is li {
+    margin-bottom: 6px;
+
+    font-size: 15px;
+
+    color: #4d6342;
+}
+
+.what-is li::before {
+    content: "✓";
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 16px;
+    height: 16px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: #57913d;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   CONTOH MAKANAN
+===================================================== */
+
+.examples {
+    position: relative;
+
+    z-index: 4;
+
+    margin-bottom: 15px;
+}
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 8px;
+}
+
+
+/* =====================================================
+   FOOD CARD
+===================================================== */
+
+.food-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 177px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    text-align: center;
+
+    border: 2px solid #d9d9bd;
+
+    box-shadow:
+        0 4px 9px rgba(0, 0, 0, 0.08);
+
+    padding-bottom: 9px;
+}
+
+.food-number {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 6px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    border: 2px solid white;
+}
+
+.food-card img {
+    width: 100%;
+    height: 108px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.food-card h3 {
+    margin: 6px 7px 5px;
+
+    padding: 5px;
+
+    border-radius: 18px;
+
+    font-size: 14px;
+
+    color: white;
+}
+
+.food-card p {
+    margin: 5px 9px 0;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+
+    color: #5f6559;
+}
+
+
+/* =====================================================
+   WARNA CARD
+===================================================== */
+
+.nasi {
+    border-color: #9eb86b;
+}
+
+.nasi .food-number,
+.nasi h3 {
+    background: #71a13b;
+}
+
+
+.jagung {
+    border-color: #f0c34d;
+}
+
+.jagung .food-number,
+.jagung h3 {
+    background: #e89b20;
+}
+
+
+.ubi {
+    border-color: #ee8d8d;
+}
+
+.ubi .food-number,
+.ubi h3 {
+    background: #d95d68;
+}
+
+
+.singkong {
+    border-color: #8dc0d7;
+}
+
+.singkong .food-number,
+.singkong h3 {
+    background: #428bb3;
+}
+
+
+.sagu {
+    border-color: #b49fd1;
+}
+
+.sagu .food-number,
+.sagu h3 {
+    background: #8063a7;
+}
+
+
+/* =====================================================
+   INFO
+===================================================== */
+
+.info-row {
+    position: relative;
+
+    z-index: 4;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.info-box {
+    min-height: 125px;
+
+    padding: 14px;
+
+    border-radius: 18px;
+
+    background: #fff8df;
+
+    border: 2px dashed #e39c58;
+}
+
+.info-box p {
+    margin: 7px 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #5b6255;
+}
+
+.why {
+    border-color: #85aa57;
+}
+
+.why ul {
+    list-style: none;
+
+    margin: 6px 0;
+
+    padding: 0;
+}
+
+.why li {
+    margin-bottom: 7px;
+
+    font-size: 16px;
+
+    color: #505c48;
+}
+
+.why li::before {
+    content: "✓";
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 17px;
+    height: 17px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: #60943e;
+
+    color: white;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   CALLOUT
+===================================================== */
+
+.callout {
+    position: relative;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 82px;
+
+    padding: 12px 17px;
+
+    border-radius: 19px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e4efc4,
+            #fff1c6
+        );
+
+    border: 2px solid #aec567;
+
+    margin-bottom: 12px;
+}
+
+.callout-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 30px;
+}
+
+.callout-content {
+    flex: 1;
+}
+
+.callout h2 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+
+    color: #47722f;
+}
+
+.callout p {
+    margin: 3px 0;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: #555e4d;
+}
+
+.mini-foods {
+    font-size: 31px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media screen and (max-width: 800px) {
+
+    body {
+        background: #fff8df;
+    }
+
+    .poster {
+        width: 100%;
+        height: auto;
+
+        min-height: 100vh;
+
+        margin: 0;
+
+        padding: 25px 18px;
+
+        box-shadow: none;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .header h2 {
+        font-size: 30px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+    }
+
+    .main-photo {
+        height: 230px;
+    }
+
+    .food-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-foods {
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   PRINT / PDF
+===================================================== */
+
+@media print {
+
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: transparent;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .poster {
+        width: 210mm;
+        height: 297mm;
+
+        margin: 0;
+
+        box-shadow: none;
+    }
+
+    /* =========================
+   TOMBOL PRINT
+========================= */
+
+.print-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #222;
+    color: white;
+
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background: #444;
+}
+
+
+/* =========================
+   SEMBUNYIKAN SAAT PRINT
+========================= */
+
+@media print {
+
+    .print-btn {
+        display: none;
+    }
+}
+}
